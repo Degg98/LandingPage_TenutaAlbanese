@@ -9,30 +9,43 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
-        /* Stile personalizzato per emulare il sito di riferimento */
+        /* Stile personalizzato */
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #f8f5f2; /* Sfondo bianco sporco, caldo e accogliente */
-            color: #3a3a3a; /* Colore testo principale, un grigio scuro morbido */
+            background-color: #f8f5f2;
+            color: #3a3a3a;
         }
         h1, h2, h3 {
-            font-family: 'Lora', serif; /* Font con grazie per i titoli, elegante e classico */
-        }
-        .hero {
-            /* Usiamo min-height invece di height per una migliore compatibilità mobile */
-            min-height: 100vh;
-            background-image: url('Public/Piscina.jpeg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed; /* Effetto parallasse per un tocco di profondità */
+            font-family: 'Lora', serif;
         }
         .section-divider {
             width: 80px;
             height: 2px;
-            background-color: #c4a787; /* Colore di accento: un oro/terracotta desaturato */
-            margin: 1.5rem auto; /* Ridotto leggermente il margine per mobile */
+            background-color: #c4a787;
+            margin: 1.5rem auto;
         }
-        /* Animazione di fade-in per gli elementi durante lo scroll */
+
+        /* GESTIONE IMMAGINI DI SFONDO */
+        .hero, .bg-parallax {
+            background-size: cover;
+            background-position: center;
+            /* Per default (mobile), lo sfondo scorre normalmente */
+            background-attachment: scroll; 
+        }
+        .hero {
+            min-height: 100vh;
+            background-image: url('Public/Piscina.jpeg');
+        }
+
+        /* SOLO PER DESKTOP (schermi più larghi di 1024px) */
+        @media (min-width: 1024px) {
+            .hero, .bg-parallax {
+                /* Riattiviamo l'effetto parallasse solo sui dispositivi più grandi */
+                background-attachment: fixed;
+            }
+        }
+
+        /* Animazione di fade-in */
         .fade-in {
             opacity: 0;
             transform: translateY(20px);
@@ -63,7 +76,7 @@
         </section>
 
         <section class="fade-in">
-            <div class="w-full h-80 sm:h-96 bg-cover bg-center bg-fixed" style="background-image: url('Public/Griglia.jpeg');" title="Immagine di una tavola allestita all'aperto">
+            <div class="w-full h-80 sm:h-96 bg-cover bg-center bg-parallax" style="background-image: url('Public/Griglia.jpeg');" title="Immagine di una tavola allestita all'aperto">
             </div>
         </section>
 
@@ -128,7 +141,6 @@
         </footer>
 
     </main>
-
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const fadeInElements = document.querySelectorAll('.fade-in');
@@ -144,6 +156,5 @@
             fadeInElements.forEach(el => observer.observe(el));
         });
     </script>
-
 </body>
 </html>
