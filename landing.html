@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferragosto Lucano | 15.08.2025</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Stile personalizzato per emulare il sito di riferimento */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f5f2; /* Sfondo bianco sporco, caldo e accogliente */
+            color: #3a3a3a; /* Colore testo principale, un grigio scuro morbido */
+        }
+        h1, h2, h3 {
+            font-family: 'Lora', serif; /* Font con grazie per i titoli, elegante e classico */
+        }
+        .hero {
+            height: 100vh;
+            /* Immagine di sfondo evocativa. Sostituire con una foto reale della tenuta */
+            background-image: url('Piscina.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Effetto parallasse per un tocco di profondità */
+        }
+        .section-divider {
+            width: 80px;
+            height: 2px;
+            background-color: #c4a787; /* Colore di accento: un oro/terracotta desaturato */
+            margin: 2rem auto;
+        }
+        /* Animazione di fade-in per gli elementi durante lo scroll */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Sezione Hero: il primo impatto visivo -->
+    <header class="hero flex items-center justify-center text-white text-center">
+        <div class="bg-black bg-opacity-40 p-8 rounded-lg">
+            <h1 class="text-5xl md:text-7xl font-bold tracking-wider">Ferragosto Lucano</h1>
+            <p class="text-xl md:text-2xl mt-4 font-light">15 Agosto 2025 &middot; Tenuta Albanese</p>
+        </div>
+    </header>
+
+    <!-- Contenuto Principale -->
+    <main>
+        <!-- Sezione di Introduzione: il concept della giornata -->
+        <section class="py-20 px-6 text-center max-w-3xl mx-auto fade-in">
+            <h2 class="text-4xl font-semibold">Una Giornata di Festa e Condivisione</h2>
+            <div class="section-divider"></div>
+            <p class="text-lg leading-relaxed">
+                Siamo felici di invitarvi a trascorrere insieme una giornata speciale, immersi nella quiete della campagna lucana. Un'occasione per ritrovarci, celebrare l'amicizia di una vita e creare nuovi ricordi, tra un tuffo in piscina e una risata. Il pranzo sarà il frutto della nostra collaborazione: un menù preparato insieme, con le mani in pasta, per rendere ogni sapore ancora più autentico.
+            </p>
+        </section>
+
+        <!-- Sezione Immagine: stacco visivo -->
+        <section class="fade-in">
+            <div class="w-full h-96 bg-cover bg-center bg-fixed" style="background-image: url('Griglia.jpeg');" title="Immagine di una tavola allestita all'aperto">
+            </div>
+        </section>
+
+        <!-- Sezione Luogo: descrizione della location -->
+        <section class="py-20 px-6 text-center max-w-3xl mx-auto fade-in">
+            <h2 class="text-4xl font-semibold">La Tenuta Albanese</h2>
+            <div class="section-divider"></div>
+            <p class="text-lg leading-relaxed">
+                Ospiti dei nostri cari amici, i fratelli Albanese, ci ritroveremo nella loro splendida tenuta privata. Un'oasi di pace tra gli ulivi secolari, dove il tempo sembra rallentare. La piscina ci offrirà un fresco rifugio dalla calura estiva, mentre l'ombra degli alberi sarà la cornice perfetta per le nostre chiacchiere.
+            </p>
+        </section>
+
+        <!-- Sezione Menù: un assaggio di ciò che si mangerà -->
+        <section class="bg-white py-20 px-6 fade-in">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-semibold">Un Viaggio tra Mare e Terra</h2>
+                <div class="section-divider"></div>
+                <p class="text-lg leading-relaxed mb-12 max-w-3xl mx-auto">
+                    Il nostro menù sarà un omaggio ai sapori della Basilicata. Inizieremo con la freschezza del mare, grazie al pescato della <strong>Pescheria DeSalvo</strong>, per poi tuffarci nei gusti decisi della terra, con i prodotti della <strong>Latteria Albanese</strong> e le carni locali.
+                </p>
+                <div class="grid md:grid-cols-3 gap-8 text-left">
+                    <div class="border-l-2 border-[#c4a787] pl-6">
+                        <h3 class="text-2xl font-semibold mb-2">Antipasti</h3>
+                        <p>Insalata di polpo e patate<br>Impepata di cozze e vongole</p>
+                    </div>
+                    <div class="border-l-2 border-[#c4a787] pl-6">
+                        <h3 class="text-2xl font-semibold mb-2">Portate Principali</h3>
+                        <p>Paccheri al ragù di pesce<br>Grande grigliata mista di mare e di terra</p>
+                    </div>
+                    <div class="border-l-2 border-[#c4a787] pl-6">
+                        <h3 class="text-2xl font-semibold mb-2">Alternative</h3>
+                        <p>Opzioni vegetariane e vegane saranno disponibili. Vi preghiamo di segnalarci in anticipo eventuali esigenze alimentari.</p>
+                    </div>
+                </div>
+                <!-- Pulsante per il download del menù -->
+                <div class="mt-16 text-center">
+                    <a href="https://drive.google.com/file/d/13kBIInbwnRv53URuLTD2aM-wFyS006u-/view?usp=sharing"
+                       class="bg-[#3a3a3a] text-white font-bold py-3 px-8 rounded-full hover:bg-[#5a5a5a] transition-colors duration-300 inline-block"
+                       target="_blank" rel="noopener noreferrer" title="Scarica il menù completo in formato PDF">
+                        Scarica la proposta di Programma e Menù
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Dettagli: informazioni logistiche -->
+        <section class="py-20 px-6 fade-in">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-4xl font-semibold">Dettagli dell'Evento</h2>
+                <div class="section-divider"></div>
+                <div class="text-lg leading-loose">
+                    <p><strong>Quando:</strong> Venerdì 15 Agosto 2025, dalle ore 12:00</p>
+                    <p><strong>Dove:</strong> Tenuta Albanese, nei pressi del bivio Grassano-Tricarico (MT). <br><a href="#" class="text-[#c4a787] hover:underline" title="Link a Google Maps (da inserire)">Indicazioni seguiranno</a></p>
+                    <p><strong>Cosa Portare:</strong> Costume da bagno, un telo, il vostro vino preferito da condividere e soprattutto il vostro sorriso migliore.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer e RSVP: call to action per la conferma -->
+        <footer class="bg-white py-12 px-6 text-center fade-in">
+            <h3 class="text-3xl font-semibold">Ci sarai?</h3>
+            <div class="section-divider"></div>
+            <p class="text-lg mb-4">Per aiutarci con l'organizzazione, ti chiediamo gentilmente di confermare la tua presenza.</p>
+            <!-- Il link 'mailto' apre direttamente il client di posta dell'utente con i campi pre-compilati -->
+            <a href="mailto:email@example.com?subject=Conferma%20Presenza%20Ferragosto&body=Ciao!%20Confermo%20con%20piacere%20la%20mia%20presenza%20per%20il%2015%20Agosto.%20Saremo%20in%20[numero]%20persone.%0D%0AEventuali%20allergie/intolleranze:%20[specificare]%0D%0AA%20presto!" class="bg-[#c4a787] text-white font-bold py-3 px-8 rounded-full hover:bg-[#b39574] transition-colors duration-300 inline-block">
+                Conferma entro il 12° Agosto
+            </a>
+        </footer>
+
+    </main>
+
+    <script>
+        // JavaScript per l'animazione di fade-in durante lo scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeInElements = document.querySelectorAll('.fade-in');
+
+            // L'Intersection Observer verifica quando un elemento entra nel viewport
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        // Opzionale: si può de-registrare l'observer dopo l'animazione per ottimizzare le performance
+                        // observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1 // L'animazione parte quando almeno il 10% dell'elemento è visibile
+            });
+
+            fadeInElements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+
+</body>
+</html>
