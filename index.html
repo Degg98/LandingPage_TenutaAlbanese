@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ferragosto Lucano | 15.08.2025</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
@@ -29,18 +31,19 @@
         .hero, .bg-parallax {
             background-size: cover;
             background-position: center;
-            /* Per default (mobile), lo sfondo scorre normalmente */
-            background-attachment: scroll; 
+            /* IMPOSTAZIONE PREDEFINITA (MOBILE): lo sfondo scorre con la pagina */
+            background-attachment: fixed; 
         }
         .hero {
             min-height: 100vh;
             background-image: url('Public/Piscina.jpeg');
         }
         .bg-parallax {
+            /* Immagine per la seconda sezione */
             background-image: url('Public/Griglia.jpeg');
         }
 
-        /* SOLO PER DESKTOP (schermi più larghi di 1024px) */
+        /* MEDIA QUERY PER DESKTOP (schermi più larghi di 1024px) */
         @media (min-width: 1024px) {
             .hero, .bg-parallax {
                 /* Riattiviamo l'effetto parallasse solo sui dispositivi più grandi */
@@ -62,6 +65,7 @@
 </head>
 <body class="antialiased">
 
+    <!-- Sezione Hero -->
     <header class="hero flex items-center justify-center text-white text-center p-4">
         <div class="bg-black bg-opacity-40 p-6 sm:p-8 rounded-lg">
             <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold tracking-wider">Ferragosto Lucano</h1>
@@ -69,7 +73,9 @@
         </div>
     </header>
 
+    <!-- Contenuto Principale -->
     <main>
+        <!-- Sezione Introduzione -->
         <section class="py-16 md:py-20 px-4 sm:px-6 text-center max-w-3xl mx-auto fade-in">
             <h2 class="text-3xl sm:text-4xl font-semibold">Una Giornata di Festa e Condivisione</h2>
             <div class="section-divider"></div>
@@ -78,11 +84,13 @@
             </p>
         </section>
 
+        <!-- Sezione Immagine Parallasse -->
         <section class="fade-in">
-            <div class="w-full h-80 sm:h-96 bg-cover bg-center bg-parallax" title="Immagine di una tavola allestita all'aperto">
+            <div class="w-full h-80 sm:h-96 bg-parallax" title="Immagine di una tavola allestita all'aperto">
             </div>
         </section>
 
+        <!-- Sezione Luogo -->
         <section class="py-16 md:py-20 px-4 sm:px-6 text-center max-w-3xl mx-auto fade-in">
             <h2 class="text-3xl sm:text-4xl font-semibold">La Tenuta Albanese</h2>
             <div class="section-divider"></div>
@@ -91,6 +99,7 @@
             </p>
         </section>
 
+        <!-- Sezione Menù -->
         <section class="bg-white py-16 md:py-20 px-4 sm:px-6 fade-in">
             <div class="max-w-4xl mx-auto text-center">
                 <h2 class="text-3xl sm:text-4xl font-semibold">Un Viaggio tra Mare e Terra</h2>
@@ -122,6 +131,7 @@
             </div>
         </section>
 
+        <!-- Sezione Dettagli -->
         <section class="py-16 md:py-20 px-4 sm:px-6 fade-in">
             <div class="max-w-3xl mx-auto text-center">
                 <h2 class="text-3xl sm:text-4xl font-semibold">Dettagli dell'Evento</h2>
@@ -134,6 +144,7 @@
             </div>
         </section>
 
+        <!-- Footer e RSVP -->
         <footer class="bg-white py-12 px-4 sm:px-6 text-center fade-in">
             <h3 class="text-2xl sm:text-3xl font-semibold">Ci sarai?</h3>
             <div class="section-divider"></div>
